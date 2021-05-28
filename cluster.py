@@ -5,12 +5,61 @@ Functions for frame clustering and video segmentation
 """
 
 from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_samples
 from frame_extraction import order
 import numpy as np
 import pandas as pd
 import os
 import cv2
 
+
+def key_frames(frames_dir, n_clusters=3):
+    """Looks for key frames of each cluster in a set of frames
+
+    Parameters
+    ----------
+    frames_dir
+    n_clusters
+
+    Returns
+    -------
+    frame_ids
+        list of ids of key frames (as many as n_clusters)
+    """
+
+    frame_filenames = os.listdir(frames_dir)
+    frame_filenames.sort(key=order)
+
+    # Read frames and load data
+    print('Loading data...')
+    data = []
+    for name in frame_filenames:
+        frame_path = os.path.join(frames_dir, name)
+        img = cv2.imread(frame_path)
+        img = img[:, :, 0]  # get only one channel (black and white)
+        img = cv2.resize(img, (200, 200))
+        sample = img.reshape(-1) / 255  # suitable shape for clustering and normalize to (0,1)
+        data.append(sample)
+
+    data = np.array(data)
+
+    # Calculate clusters
+    print('Calculating clusters...')
+    kmeans = KMeans(n_clusters)
+    kmeans.fit(data)
+
+    labels = kmeans.labels_
+    silhouettes = silhouette_samples(data, labels)
+
+    # Locate key frames
+    frame_ids = []
+    for n in range(n_clusters):
+        # Search for frame with maximum silhouette
+        maximum = silhouettes[np.where(labels == n)].max()
+        index, = np.where(silhouettes == maximum)
+        frame_ids.append(index[0])
+
+    return frame_ids
 
 
 def cluster(frames_dir, n_clusters=3):
@@ -26,8 +75,7 @@ def cluster(frames_dir, n_clusters=3):
     frames_dir = os.path.join('frames', frames_dir)
     paths = os.listdir(frames_dir)
     paths.sort(key=order)
-    
-    
+
     # Read frames and load data
     print('Loading data...')
     data = []
@@ -53,10 +101,9 @@ def cluster(frames_dir, n_clusters=3):
     # Reshape centroids
     height, width = img.shape
     centroids = centroids.reshape(n_clusters, height, width)
-    
-    
+
     # Create directory
-    if os.path.exists(centroids_dir) == False:
+    if not os.path.exists(centroids_dir):
         os.makedirs(centroids_dir)
     
     # Save images
@@ -68,9 +115,7 @@ def cluster(frames_dir, n_clusters=3):
     print('Centroids saved to directory:', centroids_dir)
     
     return labels
-     
 
-    
 
 def cluster_all():
     """ 
@@ -85,7 +130,3 @@ def cluster_all():
         labels = cluster(video)
         labels_path = os.path.join('centroids', video+'.txt')
         np.savetxt(labels_path, labels, fmt='%d')
-    
-      
-
-    
