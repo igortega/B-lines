@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{allinovi}
+Marco Allinovi, Alberto Parise, Martina Giacalone, Andrea Amerio, Marco
+  Delsante, Anna Odone, Andrea Franci, Fabrizio Gigliotti, Silvia Amadasi,
+  Davide Delmonte, et~al.
+\newblock Lung ultrasound may support diagnosis and monitoring of covid-19
+  pneumonia.
+\newblock {\em Ultrasound in Medicine and Biology}, 46(11):2908--2917, 2020.
+
+\bibitem{farr}
+Penelope~J Allisy-Roberts and Jerry Williams.
+\newblock {\em Farr's physics for medical imaging}.
+\newblock Elsevier Health Sciences, 2007.
+
+\bibitem{artifacts}
+Michael Baad, Zheng~Feng Lu, Ingrid Reiser, and David Paushter.
+\newblock Clinical significance of us artifacts.
+\newblock {\em Radiographics}, 2017.
+
+\bibitem{born2020pocovid}
+Jannis Born, Gabriel Br{\"a}ndle, Manuel Cossio, Marion Disdier, Julie Goulet,
+  J{\'e}r{\'e}mie Roulin, and Nina Wiedemann.
+\newblock Pocovid-net: automatic detection of covid-19 from a new lung
+  ultrasound imaging dataset (pocus).
+\newblock {\em arXiv preprint arXiv:2004.12084}, 2020.
+
+\bibitem{brattain}
+Laura~J Brattain, Brian~A Telfer, Andrew~S Liteplo, and Vicki~E Noble.
+\newblock Automated b-line scoring on thoracic sonography.
+\newblock {\em Journal of Ultrasound in Medicine}, 2013.
+
+\bibitem{bushberg}
+Jerrold~T Bushberg and John~M Boone.
+\newblock {\em The essential physics of medical imaging}.
+\newblock Lippincott Williams \& Wilkins, 2011.
+
+\bibitem{cristiana2020automated}
+B~Cristiana, T~Grzegorz, K~Seungsoo, M~Katelyn, L~Rachel, M~Shaw, RL~McNamara,
+  R~Balasundar, and CL~Moore.
+\newblock Automated lung ultrasound b-line assessment using a deep learning
+  algorithm.
+\newblock {\em IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency
+  Control}, 2020.
+
+\bibitem{esteva}
+Andre Esteva, Brett Kuprel, Roberto~A Novoa, Justin Ko, Susan~M Swetter,
+  Helen~M Blau, and Sebastian Thrun.
+\newblock Dermatologist-level classification of skin cancer with deep neural
+  networks.
+\newblock {\em nature}, 542(7639):115--118, 2017.
+
+\bibitem{geron}
+Aur{\'e}lien G{\'e}ron.
+\newblock {\em Hands-on machine learning with Scikit-Learn, Keras, and
+  TensorFlow: Concepts, tools, and techniques to build intelligent systems}.
+\newblock O'Reilly Media, 2019.
+
+\bibitem{moshavegh}
+Ramin Moshavegh, Kristoffer~Lindskov Hansen, Hasse~M{\o}ller S{\o}rensen,
+  Martin~Christian Hemmsen, Caroline Ewertsen, Michael~Bachmann Nielsen, and
+  J{\o}rgen~Arendt Jensen.
+\newblock Novel automatic detection of pleura and b-lines (comet-tail
+  artifacts) on in vivo lung ultrasound scans.
+\newblock In {\em Medical Imaging 2016: Ultrasonic Imaging and Tomography},
+  volume 9790, page 97900K. International Society for Optics and Photonics,
+  2016.
+
+\bibitem{python}
+Andreas~C M{\"u}ller and Sarah Guido.
+\newblock {\em Introduction to machine learning with Python: a guide for data
+  scientists}.
+\newblock " O'Reilly Media, Inc.", 2016.
+
+\bibitem{ottaviani}
+S~Ottaviani, M~Franc, E~Ebstein, L~Demaria, C~Lheure, MP~Debray, A~Khalil,
+  B~Crestani, R~Borie, and P~Dieud{\'e}.
+\newblock Lung ultrasonography in patients with covid-19: comparison with ct.
+\newblock {\em Clinical radiology}, 75(11):877--e1, 2020.
+
+\bibitem{sklearn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 2011.
+
+\bibitem{rajpurkar}
+Pranav Rajpurkar, Jeremy Irvin, Kaylie Zhu, Brandon Yang, Hershel Mehta, Tony
+  Duan, Daisy Ding, Aarti Bagul, Curtis Langlotz, Katie Shpanskaya, et~al.
+\newblock Chexnet: Radiologist-level pneumonia detection on chest x-rays with
+  deep learning.
+\newblock {\em arXiv preprint arXiv:1711.05225}, 2017.
+
+\bibitem{roy2020deep}
+Subhankar Roy, Willi Menapace, Sebastiaan Oei, Ben Luijten, Enrico Fini,
+  Cristiano Saltori, Iris Huijben, Nishith Chennakeshava, Federico Mento,
+  Alessandro Sentelli, et~al.
+\newblock Deep learning for classification and localization of covid-19 markers
+  in point-of-care lung ultrasound.
+\newblock {\em IEEE Transactions on Medical Imaging}, 39(8):2676--2687, 2020.
+
+\bibitem{shen}
+Chenyang Shen, Dan Nguyen, Zhiguo Zhou, Steve~B Jiang, Bin Dong, and Xun Jia.
+\newblock An introduction to deep learning in medical physics: advantages,
+  potential, and challenges.
+\newblock {\em Physics in Medicine \& Biology}, 65(5):05TR01, 2020.
+
+\bibitem{tung2020lung}
+Yale Tung-Chen.
+\newblock Lung ultrasound in the monitoring of covid-19 infection.
+\newblock {\em Clinical Medicine}, 20(4):e62, 2020.
+
+\bibitem{vanSloun}
+Ruud~JG van Sloun and Libertario Demi.
+\newblock Localizing b-lines in lung ultrasonography by weakly supervised deep
+  learning, in-vivo results.
+\newblock {\em IEEE journal of biomedical and health informatics}, 2019.
+
+\end{thebibliography}

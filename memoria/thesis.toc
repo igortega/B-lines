@@ -1,0 +1,22 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{3}%
+\contentsline {subsection}{\numberline {1.1}Motivation and context: what does all this have to do with Physics?}{3}%
+\contentsline {subsubsection}{\numberline {1.1.1}The broad topic: Medical Physics and Artificial Intelligence}{3}%
+\contentsline {subsubsection}{\numberline {1.1.2}The specific topic: Lung ultrasound and Covid-19}{3}%
+\contentsline {subsection}{\numberline {1.2}Physics of ultrasound imaging}{4}%
+\contentsline {subsubsection}{\numberline {1.2.1}Physical principles of ultrasound imaging}{4}%
+\contentsline {subsubsection}{\numberline {1.2.2}Transducers, beam properties}{5}%
+\contentsline {subsubsection}{\numberline {1.2.3}Image formation}{6}%
+\contentsline {subsubsection}{\numberline {1.2.4}Lung Ultrasound and artifacts}{6}%
+\contentsline {section}{\numberline {2}Objectives}{7}%
+\contentsline {section}{\numberline {3}Methods}{8}%
+\contentsline {subsection}{\numberline {3.1}Software tools}{8}%
+\contentsline {subsection}{\numberline {3.2}Dataset}{8}%
+\contentsline {subsection}{\numberline {3.3}Polar format of ultrasound images}{9}%
+\contentsline {subsection}{\numberline {3.4}Frame-based clustering of ultrasound videos}{9}%
+\contentsline {subsection}{\numberline {3.5}B-line scoring (*feature extraction from ultrasound images)}{10}%
+\contentsline {subsection}{\numberline {3.6}Image classification with logistic regression}{11}%
+\contentsline {section}{\numberline {4}Results}{12}%
+\contentsline {subsection}{\numberline {4.1}ULTRACOV project}{12}%
+\contentsline {subsection}{\numberline {4.2}Video analysis}{13}%
+\contentsline {section}{\numberline {5}Discussion}{15}%
