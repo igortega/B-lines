@@ -17,7 +17,6 @@ def order(string):
     return int(n)
 
 
-
 def crop(img):
     """ 
     Crops region of interest and returns
@@ -31,8 +30,6 @@ def crop(img):
     img = img[25:930, :] # Crop upper and lower margins
     
     return img
-
-
 
 
 def extract_and_crop(video_path, frames_dir, step=1):
@@ -72,9 +69,6 @@ def extract_and_crop(video_path, frames_dir, step=1):
         
     cap.release()
     
-
-
-
 
 def extract_all():
     """ 

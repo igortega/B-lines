@@ -100,8 +100,8 @@ def score_all(video_paths):
     score_array = np.zeros((len(video_paths), 3))
     
     for k in range(len(video_paths)):
-        path = os.path.join('polar', video_paths[k])
-        score_array[k,:] = video_score(path)
+        path = os.path.join('key_frames', video_paths[k])
+        score_array[k, :] = video_score(path)
     
     np.savetxt('scores.txt', score_array, fmt='%.2f')
     return score_array

@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from frame_extraction import extract_all
 from cluster import cluster_all
-from polar import polar_all
+from polar import polar, polar_all
 from regression import train_test_split
 from scoring import score_all
 from sklearn.linear_model import LogisticRegression
@@ -21,6 +21,8 @@ from sklearn.metrics import plot_confusion_matrix
 
 "train_test_split() to create stratified train and test sets"
 
+
+
 # Split train and test sets
 train, test = train_test_split()
 
@@ -30,7 +32,7 @@ train_scores = score_all(train['Id'])
 train_labels = np.array(train['B-lines'])
 
 # Train model
-reg = LogisticRegression()
+reg = LogisticRegression(class_weight='balanced')
 reg.fit(train_scores, train_labels)
 
 # Calculate scores of test set
@@ -57,8 +59,9 @@ plt.scatter(train_scores[train_labels == 0][:,0],train_scores[train_labels==0][:
 plt.xlabel('Total mean')
 plt.ylabel('Quarter mean')
 plt.legend()
-plt.savefig('figures/scores1_2.png')
 plt.show()
+plt.savefig('figures/scores1_2.png')
+
 
 # Scores 1 and 3
 plt.scatter(train_scores[train_labels == 1][:,0],train_scores[train_labels==1][:,2], alpha=0.9, label='B-lines')
@@ -66,8 +69,9 @@ plt.scatter(train_scores[train_labels == 0][:,0],train_scores[train_labels==0][:
 plt.xlabel('Total mean')
 plt.ylabel('Fraction above half max.')
 plt.legend()
-plt.savefig('figures/scores1_3.png')
 plt.show()
+plt.savefig('figures/scores1_3.png')
+
 
 # Scores 2 and 3
 plt.scatter(train_scores[train_labels == 1][:,1],train_scores[train_labels==1][:,2], alpha=0.9, label='B-lines')
@@ -75,8 +79,9 @@ plt.scatter(train_scores[train_labels == 0][:,1],train_scores[train_labels==0][:
 plt.xlabel('Quarter mean')
 plt.ylabel('Fraction above half max.')
 plt.legend()
-plt.savefig('figures/scores2_3.png')
 plt.show()
+plt.savefig('figures/scores2_3.png')
+
 
 
 # Plot test
@@ -97,8 +102,9 @@ plt.scatter(test_scores[FN][:,0],test_scores[FN][:,1], label='False negative', c
 plt.xlabel('Total mean')
 plt.ylabel('Quarter mean')
 plt.legend()
-plt.savefig('figures/discussion.png')
 plt.show()
+plt.savefig('figures/discussion.png')
+
 
 
 

@@ -31,7 +31,7 @@ def key_frames(frames_dir, n_clusters=3):
     frame_filenames.sort(key=order)
 
     # Read frames and load data
-    print('Loading data...')
+    # print('Loading data...')
     data = []
     for name in frame_filenames:
         frame_path = os.path.join(frames_dir, name)
@@ -44,7 +44,7 @@ def key_frames(frames_dir, n_clusters=3):
     data = np.array(data)
 
     # Calculate clusters
-    print('Calculating clusters...')
+    # print('Calculating clusters...')
     kmeans = KMeans(n_clusters)
     kmeans.fit(data)
 
@@ -130,3 +130,26 @@ def cluster_all():
         labels = cluster(video)
         labels_path = os.path.join('centroids', video+'.txt')
         np.savetxt(labels_path, labels, fmt='%d')
+
+
+def key_frames_all(n_clusters=3):
+    """Get key frames ids for every video and save to .csv
+
+    Returns
+    -------
+
+    """
+    main_frames_dir = 'frames'
+
+    data = pd.read_csv('labels.csv', sep=';')
+
+    key_frames_df = data.copy().drop(['B-lines', 'Range'], axis=1)
+    for k in range(len(key_frames_df)):
+        print('Video', k, 'out of', len(key_frames_df))
+        frames_dir = os.path.join(main_frames_dir, key_frames_df.loc[k, 'Id'])
+        key_frames_ids = key_frames(frames_dir, n_clusters)
+        for j in range(n_clusters):
+            key_frames_df.loc[k, 'Cluster%d' % j] = int(key_frames_ids[j])
+
+    key_frames_df.to_csv('key_frames.csv', sep=';', index=None)
+    return key_frames_df

@@ -11,7 +11,6 @@ import numpy as np
 import pandas as pd
 
 
-
 def max_slope(depth):
     """
     Returns 'dx' and 'dy' for slope of image boundaries given 'depth'
@@ -39,14 +38,10 @@ def max_slope(depth):
     return dx, dy
 
 
-    
-
 def polar(img, depth, n_rows=50, n_cols=50):
     
-    " Description "
-    
     if len(img.shape) == 3:
-        img = img[:,:,0]
+        img = img[:, :, 0]
     # print("Reshaping image...")
     
     # Get frame dimensions
@@ -108,8 +103,6 @@ def polar(img, depth, n_rows=50, n_cols=50):
     return polar_img
 
 
-
-
 def mask(n_rows=50, n_cols=50):
     """ 
     Creates and saves masks of polar images for every depth value.
@@ -127,7 +120,6 @@ def mask(n_rows=50, n_cols=50):
         mask_img = np.isnan(img)
         dst_path = os.path.join('mask', 'depth%d.jpg' % depth)
         cv2.imwrite(dst_path, mask_img*255)
-
 
 
 def polar_list(frames_dir, polar_dir, depth, n_rows=50, n_cols=50):
@@ -156,8 +148,6 @@ def polar_list(frames_dir, polar_dir, depth, n_rows=50, n_cols=50):
         cv2.imwrite(dst_path, polar_img)
 
 
-
-
 def polar_all():
     """ 
     (TAKES TOO LONG)
@@ -174,3 +164,33 @@ def polar_all():
         src_dir = os.path.join('centroids', labels['Id'][k])
         dst_dir = os.path.join('polar', labels['Id'][k])
         polar_list(src_dir, dst_dir, depth=labels['Range'][k])
+
+
+def polar_all_key_frames():
+    """Reshapes all key frames to polar coordinates and saves them.
+    Only selects 13 cm range.
+
+    Returns
+    -------
+
+    """
+    if not os.path.exists('key_frames'):
+        os.makedirs('key_frames')
+
+    data = pd.read_csv('labels.csv', sep=';')
+    key_frames = pd.read_csv('key_frames.csv', sep=';')
+    n_clusters = key_frames.shape[1] - 1
+    video_list = key_frames[data['Range'] == 13]
+    for k in range(len(video_list)):
+        print('Image', k, 'out of', len(video_list))
+        row = video_list.iloc[k, :]
+        video_dir = os.path.join('key_frames', row['Id'])
+        if not os.path.exists(video_dir):
+            os.makedirs(video_dir)
+        for n in range(n_clusters):
+            frame_id = int(row.iloc[n+1])
+            frame_path = os.path.join('frames', row['Id'], 'frame_%d.jpg' % frame_id)
+            image = cv2.imread(frame_path)[:, :, 0]
+            polar_image = polar(image, 13)
+            polar_image_path = os.path.join(video_dir, 'key_frame_%d.png' % frame_id)
+            cv2.imwrite(polar_image_path, polar_image)
