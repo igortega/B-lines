@@ -9,6 +9,8 @@ import os
 import cv2
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+import time
 
 
 def max_slope(depth):
@@ -38,7 +40,7 @@ def max_slope(depth):
     return dx, dy
 
 
-def polar(img, depth, n_rows=50, n_cols=50):
+def polar(img, n_rows=50, n_cols=50):
     
     if len(img.shape) == 3:
         img = img[:, :, 0]
@@ -46,48 +48,48 @@ def polar(img, depth, n_rows=50, n_cols=50):
     
     # Get frame dimensions
     xlen, ylen = img.shape
-    
+
     # Polar image array
     polar_img = np.zeros((n_rows, n_cols))
-    
+
     # Cartesian coordinates array
     x = np.array(range(xlen))
-    y = np.array(range(ylen))   
-    Y, X = np.meshgrid(y,x)
-    
+    y = np.array(range(ylen))
+    Y, X = np.meshgrid(y, x)
+
     # Polar coordinates array
-    rows, cols = np.zeros((xlen,ylen)), np.zeros((xlen,ylen))
-    
+    rows, cols = np.zeros((xlen, ylen)), np.zeros((xlen, ylen))
+
     # Calculate image boundaries
-    dx, dy = max_slope(depth)
-    ymid = int(ylen/2)    
+    dx, dy = 370, 255  # 13 cm range
+    ymid = int(ylen/2)
     m0 = dy/dx
     b0 = ymid - dy
     x0 = int(b0/m0)
     r0 = xlen + x0
-    
+
     # Radius and slope arrays
     R = np.sqrt( (X+x0)**2 + (Y-ymid)**2 )
     S = (Y-ymid)/(X+x0)
-    
+
     # Calculate region out of boundaries
     out = (S > m0) | (S < -m0) | (R > r0)
-    
+
     # Sample radii and slopes
-    r_vec = np.linspace(x0, r0, n_rows+1) 
-    m_vec = np.linspace(-m0, m0, n_cols+1) 
-    
+    r_vec = np.linspace(x0, r0, n_rows+1)
+    m_vec = np.linspace(-m0, m0, n_cols+1)
+
     # Segment image by radius and slope
     i = 0
     for radius in r_vec:
         rows[R >= radius] = i
         i += 1
-    
+
     j = 0
     for slope in m_vec:
         cols[S > slope] = j
         j += 1
-    
+
     # Discard region out of boundaries
     rows[out] = np.NaN
     cols[out] = np.NaN
@@ -96,7 +98,7 @@ def polar(img, depth, n_rows=50, n_cols=50):
     for i in range(n_rows):
         for j in range(n_cols):
             segment = img[(rows == i) & (cols == j)]
-            polar_img[i,j] = segment.mean()
+            polar_img[i, j] = segment.mean()
             
     # print("Image reshaped")
             
@@ -116,7 +118,7 @@ def mask(n_rows=50, n_cols=50):
     
     for depth in depth_values:
         img = np.zeros((xlen,ylen))
-        img = polar(img, depth, n_rows, n_cols)
+        img = polar(img, n_rows, n_cols)
         mask_img = np.isnan(img)
         dst_path = os.path.join('mask', 'depth%d.jpg' % depth)
         cv2.imwrite(dst_path, mask_img*255)
@@ -143,8 +145,8 @@ def polar_list(frames_dir, polar_dir, depth, n_rows=50, n_cols=50):
         src_path = os.path.join(frames_dir, frame)
         dst_path = os.path.join(polar_dir, frame)
         
-        img = cv2.imread(src_path)
-        polar_img = polar(img, depth, n_rows, n_cols)
+        img = cv2.imread(src_path)[:, :, 0]
+        polar_img = polar(img, n_rows, n_cols)
         cv2.imwrite(dst_path, polar_img)
 
 
@@ -191,6 +193,6 @@ def polar_all_key_frames():
             frame_id = int(row.iloc[n+1])
             frame_path = os.path.join('frames', row['Id'], 'frame_%d.jpg' % frame_id)
             image = cv2.imread(frame_path)[:, :, 0]
-            polar_image = polar(image, 13)
+            polar_image = polar(image)
             polar_image_path = os.path.join(video_dir, 'key_frame_%d.png' % frame_id)
             cv2.imwrite(polar_image_path, polar_image)

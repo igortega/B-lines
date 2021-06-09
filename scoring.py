@@ -4,105 +4,139 @@ B-lines scoring functions
 
 """
 
-
-import os
 import numpy as np
-import pandas as pd
-import cv2
 import matplotlib.pyplot as plt
 
-def highest_mean(polar_img_path):
-    """ 
-    SCORE 1
-    Input: path and depth of polar image to be scored
-    Output: score for highest  column mean brightness
-    
+
+def mean_below_pleura(polar_image):
+    """ Returns highest column's brightness mean below maximum (pleural line)
+
+    Parameters
+    ----------
+    polar_image
+
+    Returns
+    -------
+
     """
+    peak_ycoordinates = np.nanargmax(polar_image, axis=0)
+    mean_list = []
+    for k in range(len(peak_ycoordinates)):
+        mean = np.nanmean(polar_image[peak_ycoordinates[k]:, k])
+        mean_list.append(mean)
 
-    polar_img = cv2.imread(polar_img_path)
-    polar_img = polar_img[:,:,0]
-    
-    
-    maximum = np.average(polar_img, axis=0).max()
-    maximum /= polar_img.max() # Normalization
-    
-    return maximum
-
+    score = max(mean_list)
+    return score
 
 
-def last_quarter(polar_img_path):
-    """ 
-    SCORE 2
-    Input: path and depth of polar image to be scored
-    Output: maximum sum of lowest quarter brightness
-    
+def center_of_mass(polar_image):
+    """ Returns maximum y coordinate of column's center of mass
+
+    Parameters
+    ----------
+    polar_image
+
+    Returns
+    -------
+
     """
-    
-    polar_img = cv2.imread(polar_img_path)
-    polar_img = polar_img[:,:,0]
-    
-    quarter_sum = np.average(polar_img[40:,:], axis=0).max()
-    quarter_sum /= polar_img.max() # Normalization
-    
-    return quarter_sum
+    polar_image[np.isnan(polar_image)] = 0
+    coords = list(range(len(polar_image)))
+    center_list = []
+    for k in range(len(polar_image)):
+        column = polar_image[:, k]
+        column_center = np.sum(column*coords)/np.sum(column)
+        center_list.append(column_center)
+
+    score = max(center_list)/len(polar_image)
+    return score
 
 
+def bottom_quarter(polar_image):
+    """ Returns highest column's brightness mean over bottom quarter
 
-def above_half_max(polar_img_path):
-    """ 
-    SCORE 3
-    Input: path and depth of polar image to be scored
-    Output: length of column above its half maximum
-    
+    Parameters
+    ----------
+    polar_image
+
+    Returns
+    -------
+
     """
-    polar_img = cv2.imread(polar_img_path)
-    polar_img = polar_img[:,:,0]
-    
-    half_max = polar_img.max(axis=0)/2
-    
-    length_list = []
-    for k in range(len(polar_img)):
-        line = polar_img[:,k]
-        above = line > half_max[k]
-        length_list.append(np.sum(above))
-        
-    max_score = max(length_list)/50 # Normalization
-    
-    return max_score
+    image_len = len(polar_image)
+    quarter = round(3*image_len/4)
+    quarter_mean = np.nanmean(polar_image[quarter:, :], axis=0)
+    score = np.max(quarter_mean)
+    return score
 
 
+def bottom_max(polar_image):
+    """ Returns maximum intensity at most bottom point of a column
 
-def video_score(polar_centroids_dir):
-    """ 
-    Selects and returns maximum scores in every feature for a given video
-    
+    Parameters
+    ----------
+    polar_image
+
+    Returns
+    -------
+
     """
-        
-    path_list = os.listdir(polar_centroids_dir)
-    
-    score_array = np.zeros((3,3))
-    
-    # Calculate scores for each centroid
-    for i in range(3):
-        path = os.path.join(polar_centroids_dir, path_list[i])      
-        score_array[i,0] = highest_mean(path)
-        score_array[i,1] = last_quarter(path)
-        score_array[i,2] = above_half_max(path)
-    
-    # Select maximum score for each feature
-    score_maximum = score_array.max(axis=0)
-    
-    return score_maximum
+    bottom_values = []
+    for k in range(len(polar_image)):
+        column = polar_image[:, k]
+        try:
+            first_nan = list(np.isnan(column)).index(True)
+            bottom_value = column[first_nan - 1]
+        except ValueError:
+            bottom_value = column[-1]
+
+        bottom_values.append(bottom_value)
+    score = np.max(bottom_values)
+    return score
 
 
-def score_all(video_paths):
-    video_paths = np.array(video_paths)
-    score_array = np.zeros((len(video_paths), 3))
-    
-    for k in range(len(video_paths)):
-        path = os.path.join('key_frames', video_paths[k])
-        score_array[k, :] = video_score(path)
-    
-    np.savetxt('scores.txt', score_array, fmt='%.2f')
+def length_times_mean(polar_image):
+    """ Returns maximum product of column's length below peak (pleura) times its average brightness
+
+    Parameters
+    ----------
+    polar_image
+
+    Returns
+    -------
+
+    """
+    peak_ycoordinates = np.nanargmax(polar_image, axis=0)
+    score_list = []
+    for k in range(len(polar_image)):
+        column = polar_image[peak_ycoordinates[k]:, k]
+        column_length = np.sum(column[np.isnan(column) == False])/50
+        column_mean = np.nanmean(column)
+        score_list.append(column_mean*column_length)
+
+    score = max(score_list)
+    return score
+
+
+def get_score_array(polar_images_list,
+                    score_functions=[mean_below_pleura, center_of_mass, bottom_quarter, bottom_max, length_times_mean]):
+    """ Returns array shaped (number of samples, number of features) containing scores of input data
+
+    Parameters
+    ----------
+    polar_images_list
+    score_functions
+
+    Returns
+    -------
+
+    """
+    n_samples = len(polar_images_list)
+    score_array = np.zeros((n_samples, len(score_functions)))
+    for k in range(n_samples):
+        for j in range(len(score_functions)):
+            score_array[k, j] = score_functions[j](polar_images_list[k])
+
     return score_array
+
 

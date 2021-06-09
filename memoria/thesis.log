@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.2)  28 MAY 2021 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.2)  9 JUN 2021 15:13
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -198,12 +198,32 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen160
 \PaperHeight=\dimen161
-) ("C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty"
+) ("C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty"
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen162
+\lightrulewidth=\dimen163
+\cmidrulewidth=\dimen164
+\belowrulesep=\dimen165
+\belowbottomsep=\dimen166
+\aboverulesep=\dimen167
+\abovetopsep=\dimen168
+\cmidrulesep=\dimen169
+\cmidrulekern=\dimen170
+\defaultaddspace=\dimen171
+\@cmidla=\count270
+\@cmidlb=\count271
+\@aboverulesep=\dimen172
+\@belowrulesep=\dimen173
+\@thisruleclass=\count272
+\@lastruleclass=\count273
+\@thisrulewidth=\dimen174
+)
+("C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty"
 Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 \multirow@colwidth=\skip55
-\multirow@cntb=\count270
+\multirow@cntb=\count274
 \multirow@dima=\skip56
-\bigstrutjot=\dimen162
+\bigstrutjot=\dimen175
 )
 ("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -218,7 +238,7 @@ Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks20
 \minrowclearance=\skip57
 )
-\rownum=\count271
+\rownum=\count275
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -256,16 +276,16 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count272
-\scratchdimen=\dimen163
+\scratchcounter=\count276
+\scratchdimen=\dimen176
 \scratchbox=\box55
-\nofMPsegments=\count273
-\nofMParguments=\count274
+\nofMPsegments=\count277
+\nofMParguments=\count278
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count275
-\MPscratchDim=\dimen164
-\MPnumerator=\count276
-\makeMPintoPDFobject=\count277
+\MPscratchCnt=\count279
+\MPscratchDim=\dimen177
+\MPnumerator=\count280
+\makeMPintoPDFobject=\count281
 \everyMPtoPDFconversion=\toks22
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -291,187 +311,177 @@ oUCM.png>] [1] (thesis.toc)
 \openout3 = `thesis.toc'.
 
  [2]
-<figuras/DL_papers.png, id=18, 563.10374pt x 303.534pt>
+<figuras/DL_papers.png, id=18, 563.10374pt x 299.31825pt>
 File: figuras/DL_papers.png Graphic file (type png)
 <use figuras/DL_papers.png>
 Package pdftex.def Info: figuras/DL_papers.png  used on input line 97.
-(pdftex.def)             Requested size: 281.68513pt x 151.84073pt.
+(pdftex.def)             Requested size: 281.68513pt x 149.73183pt.
  [3 <./figuras/DL_papers.png>]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 133.
 
-[4]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 149.
 
+[4]
 <figuras/lowq.png, id=31, 420.97275pt x 195.73125pt>
 File: figuras/lowq.png Graphic file (type png)
 <use figuras/lowq.png>
-Package pdftex.def Info: figuras/lowq.png  used on input line 172.
+Package pdftex.def Info: figuras/lowq.png  used on input line 174.
 (pdftex.def)             Requested size: 230.04309pt x 106.95662pt.
 <figuras/highq.png, id=32, 463.7325pt x 182.48175pt>
 File: figuras/highq.png Graphic file (type png)
 <use figuras/highq.png>
-Package pdftex.def Info: figuras/highq.png  used on input line 178.
+Package pdftex.def Info: figuras/highq.png  used on input line 180.
 (pdftex.def)             Requested size: 230.04309pt x 90.52504pt.
-[5 <./figuras/lowq.png> <./figuras/highq.png>]
-<figuras/resolution.png, id=37, 270.41025pt x 106.59825pt>
-File: figuras/resolution.png Graphic file (type png)
-<use figuras/resolution.png>
-Package pdftex.def Info: figuras/resolution.png  used on input line 195.
-(pdftex.def)             Requested size: 284.52756pt x 112.16405pt.
+ [5 <./figuras/lowq.png> <./figuras/highq.png>]
+<figuras/resolution1.png, id=37, 107.80275pt x 105.996pt>
+File: figuras/resolution1.png Graphic file (type png)
+<use figuras/resolution1.png>
+Package pdftex.def Info: figuras/resolution1.png  used on input line 199.
+(pdftex.def)             Requested size: 140.84256pt x 138.48862pt.
+<figuras/resolution2.png, id=38, 119.2455pt x 105.996pt>
+File: figuras/resolution2.png Graphic file (type png)
+<use figuras/resolution2.png>
+Package pdftex.def Info: figuras/resolution2.png  used on input line 205.
+(pdftex.def)             Requested size: 140.84256pt x 125.20357pt.
 
 
 LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 2
-02.
+14.
 
 
 LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 2
-02.
+14.
 
 Missing character: There is no · in font cmr10!
-[6 <./figuras/resolution.png>]
-<figuras/reverberation.png, id=43, 152.36925pt x 275.22826pt>
+[6 <./figuras/resolution1.png> <./figuras/resolution2.png>]
+<figuras/reverberation.png, id=45, 152.36925pt x 275.22826pt>
 File: figuras/reverberation.png Graphic file (type png)
 <use figuras/reverberation.png>
-Package pdftex.def Info: figuras/reverberation.png  used on input line 218.
+Package pdftex.def Info: figuras/reverberation.png  used on input line 232.
 (pdftex.def)             Requested size: 117.36761pt x 212.0062pt.
-<figuras/alines.jpg, id=44, 634.37pt x 908.39375pt>
+<figuras/alines.jpg, id=46, 634.37pt x 908.39375pt>
 File: figuras/alines.jpg Graphic file (type jpg)
 <use figuras/alines.jpg>
-Package pdftex.def Info: figuras/alines.jpg  used on input line 223.
+Package pdftex.def Info: figuras/alines.jpg  used on input line 237.
 (pdftex.def)             Requested size: 140.84256pt x 201.67688pt.
-<figuras/blines.jpg, id=45, 634.37pt x 908.39375pt>
+<figuras/blines.jpg, id=47, 634.37pt x 908.39375pt>
 File: figuras/blines.jpg Graphic file (type jpg)
 <use figuras/blines.jpg>
-Package pdftex.def Info: figuras/blines.jpg  used on input line 229.
+Package pdftex.def Info: figuras/blines.jpg  used on input line 243.
 (pdftex.def)             Requested size: 140.84256pt x 201.67688pt.
  [7 <./figuras/reverberation.png> <./figuras/alines.jpg> <./figuras/blines.jpg>
 ] [8]
-<figuras/polar_original.png, id=53, 128.27925pt x 173.448pt>
-File: figuras/polar_original.png Graphic file (type png)
-<use figuras/polar_original.png>
-Package pdftex.def Info: figuras/polar_original.png  used on input line 283.
-(pdftex.def)             Requested size: 136.14328pt x 184.10013pt.
-<figuras/polar_new.png, id=54, 183.68625pt x 172.84575pt>
-File: figuras/polar_new.png Graphic file (type png)
-<use figuras/polar_new.png>
-Package pdftex.def Info: figuras/polar_new.png  used on input line 289.
-(pdftex.def)             Requested size: 164.31752pt x 154.63135pt.
-<figuras/polar.png, id=55, 156.585pt x 150.5625pt>
-File: figuras/polar.png Graphic file (type png)
-<use figuras/polar.png>
-Package pdftex.def Info: figuras/polar.png  used on input line 295.
-(pdftex.def)             Requested size: 140.84256pt x 135.42917pt.
- [9 <./figuras/polar_original.png> <./figuras/polar_new.png> <./figuras/polar.p
-ng>]
-<figuras/clusters.png, id=62, 735.34724pt x 498.663pt>
+<figuras/clusters.png, id=55, 735.34724pt x 498.663pt>
 File: figuras/clusters.png Graphic file (type png)
 <use figuras/clusters.png>
-Package pdftex.def Info: figuras/clusters.png  used on input line 314.
-(pdftex.def)             Requested size: 284.52756pt x 192.94077pt.
-<figuras/centroid_0.jpg, id=63, 634.37pt x 908.39375pt>
-File: figuras/centroid_0.jpg Graphic file (type jpg)
-<use figuras/centroid_0.jpg>
-Package pdftex.def Info: figuras/centroid_0.jpg  used on input line 322.
-(pdftex.def)             Requested size: 140.84256pt x 201.67688pt.
-<figuras/centroid_1.jpg, id=64, 634.37pt x 908.39375pt>
-File: figuras/centroid_1.jpg Graphic file (type jpg)
-<use figuras/centroid_1.jpg>
-Package pdftex.def Info: figuras/centroid_1.jpg  used on input line 326.
-(pdftex.def)             Requested size: 140.84256pt x 201.67688pt.
-<figuras/centroid_2.jpg, id=65, 634.37pt x 908.39375pt>
-File: figuras/centroid_2.jpg Graphic file (type jpg)
-<use figuras/centroid_2.jpg>
-Package pdftex.def Info: figuras/centroid_2.jpg  used on input line 330.
-(pdftex.def)             Requested size: 140.84256pt x 201.67688pt.
- [10 <./figuras/clusters.png>]
-<figuras/sigmoid.png, id=72, 763.653pt x 257.16075pt>
+Package pdftex.def Info: figuras/clusters.png  used on input line 287.
+(pdftex.def)             Requested size: 227.62204pt x 154.35565pt.
+<figuras/frame1.png, id=56, 634.37pt x 908.39375pt>
+File: figuras/frame1.png Graphic file (type png)
+<use figuras/frame1.png>
+Package pdftex.def Info: figuras/frame1.png  used on input line 306.
+(pdftex.def)             Requested size: 117.36761pt x 168.06407pt.
+<figuras/frame2.png, id=57, 634.37pt x 908.39375pt>
+File: figuras/frame2.png Graphic file (type png)
+<use figuras/frame2.png>
+Package pdftex.def Info: figuras/frame2.png  used on input line 309.
+(pdftex.def)             Requested size: 117.36761pt x 168.06407pt.
+<figuras/frame3.png, id=58, 634.37pt x 908.39375pt>
+File: figuras/frame3.png Graphic file (type png)
+<use figuras/frame3.png>
+Package pdftex.def Info: figuras/frame3.png  used on input line 312.
+(pdftex.def)             Requested size: 117.36761pt x 168.06407pt.
+ [9 <./figuras/clusters.png>]
+<figuras/polar_original.png, id=64, 128.27925pt x 173.448pt>
+File: figuras/polar_original.png Graphic file (type png)
+<use figuras/polar_original.png>
+Package pdftex.def Info: figuras/polar_original.png  used on input line 349.
+(pdftex.def)             Requested size: 136.14328pt x 184.10013pt.
+<figuras/polar_new.png, id=65, 183.68625pt x 172.84575pt>
+File: figuras/polar_new.png Graphic file (type png)
+<use figuras/polar_new.png>
+Package pdftex.def Info: figuras/polar_new.png  used on input line 355.
+(pdftex.def)             Requested size: 164.31752pt x 154.63135pt.
+<figuras/polar.png, id=66, 156.585pt x 150.5625pt>
+File: figuras/polar.png Graphic file (type png)
+<use figuras/polar.png>
+Package pdftex.def Info: figuras/polar.png  used on input line 361.
+(pdftex.def)             Requested size: 140.84256pt x 135.42917pt.
+ [10 <./figuras/frame1.png (PNG copy)> <./figuras/frame2.png (PNG copy)> <./fig
+uras/frame3.png (PNG copy)>] [11 <./figuras/polar_original.png> <./figuras/pola
+r_new.png> <./figuras/polar.png>]
+<figuras/sigmoid.png, id=77, 763.653pt x 257.16075pt>
 File: figuras/sigmoid.png Graphic file (type png)
 <use figuras/sigmoid.png>
-Package pdftex.def Info: figuras/sigmoid.png  used on input line 359.
+Package pdftex.def Info: figuras/sigmoid.png  used on input line 403.
 (pdftex.def)             Requested size: 312.9803pt x 105.39734pt.
- [11 <./figuras/centroid_0.jpg> <./figuras/centroid_1.jpg> <./figuras/centroid_
-2.jpg>]
-<figuras/ultracov_GUI.png, id=76, 964.8045pt x 404.712pt>
-File: figuras/ultracov_GUI.png Graphic file (type png)
-<use figuras/ultracov_GUI.png>
-Package pdftex.def Info: figuras/ultracov_GUI.png  used on input line 379.
-(pdftex.def)             Requested size: 375.57779pt x 157.5468pt.
+<figuras/score_overview.png, id=78, 1156.32pt x 216.81pt>
+File: figuras/score_overview.png Graphic file (type png)
+<use figuras/score_overview.png>
+Package pdftex.def Info: figuras/score_overview.png  used on input line 415.
+(pdftex.def)             Requested size: 469.47046pt x 88.02591pt.
+ [12 <./figuras/sigmoid.png> <./figuras/score_overview.png>]
+<figuras/logistic_confusion.png, id=84, 462.528pt x 346.896pt>
+File: figuras/logistic_confusion.png Graphic file (type png)
+<use figuras/logistic_confusion.png>
+Package pdftex.def Info: figuras/logistic_confusion.png  used on input line 427
+.
+(pdftex.def)             Requested size: 211.26027pt x 158.44664pt.
+<figuras/svc_confusion.png, id=85, 462.528pt x 346.896pt>
+File: figuras/svc_confusion.png Graphic file (type png)
+<use figuras/svc_confusion.png>
+Package pdftex.def Info: figuras/svc_confusion.png  used on input line 431.
+(pdftex.def)             Requested size: 211.26027pt x 158.44664pt.
 
-[12 <./figuras/sigmoid.png> <./figuras/ultracov_GUI.png>]
-<figuras/bline_ratio.png, id=82, 433.62pt x 289.08pt>
-File: figuras/bline_ratio.png Graphic file (type png)
-<use figuras/bline_ratio.png>
-Package pdftex.def Info: figuras/bline_ratio.png  used on input line 390.
-(pdftex.def)             Requested size: 234.73523pt x 156.49344pt.
-<figuras/scores1_2.png, id=83, 433.62pt x 289.08pt>
-File: figuras/scores1_2.png Graphic file (type png)
-<use figuras/scores1_2.png>
-Package pdftex.def Info: figuras/scores1_2.png  used on input line 398.
-(pdftex.def)             Requested size: 305.15292pt x 203.44412pt.
-<figuras/scores1_3.png, id=84, 433.62pt x 289.08pt>
-File: figuras/scores1_3.png Graphic file (type png)
-<use figuras/scores1_3.png>
-Package pdftex.def Info: figuras/scores1_3.png  used on input line 404.
-(pdftex.def)             Requested size: 305.15292pt x 203.44412pt.
-<figuras/scores2_3.png, id=85, 433.62pt x 289.08pt>
-File: figuras/scores2_3.png Graphic file (type png)
-<use figuras/scores2_3.png>
-Package pdftex.def Info: figuras/scores2_3.png  used on input line 410.
-(pdftex.def)             Requested size: 305.15292pt x 203.44412pt.
-
-
-LaTeX Warning: Float too large for page by 37.16888pt on input line 415.
-
-[13 <./figuras/bline_ratio.png>] [14 <./figuras/scores1_2.png> <./figuras/score
-s1_3.png> <./figuras/scores2_3.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 444.
+               Default added (so using `tbp') on input line 468.
 
-<figuras/discussion.png, id=96, 433.62pt x 289.08pt>
-File: figuras/discussion.png Graphic file (type png)
-<use figuras/discussion.png>
-Package pdftex.def Info: figuras/discussion.png  used on input line 457.
-(pdftex.def)             Requested size: 312.9803pt x 208.66234pt.
-[15 <./figuras/discussion.png>]
-<figuras/spleen.jpg, id=102, 634.37pt x 908.39375pt>
+[13 <./figuras/logistic_confusion.png> <./figuras/svc_confusion.png>]
+<figuras/spleen.jpg, id=91, 634.37pt x 908.39375pt>
 File: figuras/spleen.jpg Graphic file (type jpg)
 <use figuras/spleen.jpg>
-Package pdftex.def Info: figuras/spleen.jpg  used on input line 474.
-(pdftex.def)             Requested size: 129.14647pt x 184.9429pt.
-<figuras/short_range.jpg, id=103, 634.37pt x 908.39375pt>
-File: figuras/short_range.jpg Graphic file (type jpg)
-<use figuras/short_range.jpg>
-Package pdftex.def Info: figuras/short_range.jpg  used on input line 479.
-(pdftex.def)             Requested size: 129.14647pt x 184.9429pt.
- [16 <./figuras/spleen.jpg> <./figuras/short_range.jpg>] (thesis.bbl [17]) [18]
- (thesis.aux) ) 
+Package pdftex.def Info: figuras/spleen.jpg  used on input line 494.
+(pdftex.def)             Requested size: 140.84256pt x 201.67688pt.
+<figuras/bright_aline.png, id=92, 634.37pt x 908.39375pt>
+File: figuras/bright_aline.png Graphic file (type png)
+<use figuras/bright_aline.png>
+Package pdftex.def Info: figuras/bright_aline.png  used on input line 498.
+(pdftex.def)             Requested size: 140.84256pt x 201.67688pt.
+ [14 <./figuras/spleen.jpg> <./figuras/bright_aline.png (PNG copy)>]
+<figuras/ultracov_GUI.png, id=96, 964.8045pt x 404.712pt>
+File: figuras/ultracov_GUI.png Graphic file (type png)
+<use figuras/ultracov_GUI.png>
+Package pdftex.def Info: figuras/ultracov_GUI.png  used on input line 512.
+(pdftex.def)             Requested size: 375.57779pt x 157.5468pt.
+ [15 <./figuras/ultracov_GUI.png>] (thesis.bbl [16]) [17] (thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 6976 strings out of 481199
- 145265 string characters out of 2915343
- 389561 words of memory out of 3000000
- 22493 multiletter control sequences out of 15000+200000
+ 7024 strings out of 481199
+ 145941 string characters out of 2915343
+ 392324 words of memory out of 3000000
+ 22538 multiletter control sequences out of 15000+200000
  542216 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,46p,1626b,795s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Ignacio\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (19 pages, 1322886 bytes).
+ 39i,12n,46p,1457b,795s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Us
+ers\Ignacio\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk
+><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
+i10.pfb>
+Output written on thesis.pdf (18 pages, 1641045 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
+ 150 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 

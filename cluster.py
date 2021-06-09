@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 import os
 import cv2
+import shutil
 
 
 def key_frames(frames_dir, n_clusters=3):
@@ -110,7 +111,7 @@ def cluster(frames_dir, n_clusters=3):
     for i in range(n_clusters):
         name = 'centroid_%d.jpg' % i
         centroid_path = os.path.join(centroids_dir, name)
-        cv2.imwrite(centroid_path, 255*centroids[i,:,:])
+        cv2.imwrite(centroid_path, 255*centroids[i, :, :])
     
     print('Centroids saved to directory:', centroids_dir)
     
@@ -143,7 +144,7 @@ def key_frames_all(n_clusters=3):
 
     data = pd.read_csv('labels.csv', sep=';')
 
-    key_frames_df = data.copy().drop(['B-lines', 'Range'], axis=1)
+    key_frames_df = data.copy().drop('B-lines', axis=1)
     for k in range(len(key_frames_df)):
         print('Video', k, 'out of', len(key_frames_df))
         frames_dir = os.path.join(main_frames_dir, key_frames_df.loc[k, 'Id'])
@@ -153,3 +154,28 @@ def key_frames_all(n_clusters=3):
 
     key_frames_df.to_csv('key_frames.csv', sep=';', index=None)
     return key_frames_df
+
+
+def get_key_frames(key_frames_df):
+    """ Move key frames to 'key_frames' directory
+
+    Parameters
+    ----------
+    key_frames_df
+
+    Returns
+    -------
+
+    """
+    key_frames_dir = 'key_frames'
+    if not os.path.exists(key_frames_dir):
+        os.makedirs(key_frames_dir)
+
+    for k in range(len(key_frames_df)):
+        video_name = key_frames_df['Id'][k]
+        os.makedirs(os.path.join(key_frames_dir, video_name))
+        for j in range(len(key_frames_df.columns) - 1):
+            frame_id = int(key_frames_df.iloc[k, j+1])
+            source_path = os.path.join('frames', video_name, 'frame_%d.png' % frame_id)
+            destination_path = os.path.join('key_frames', video_name, 'frame_%d.png' % frame_id)
+            shutil.copy(src=source_path, dst=destination_path)
