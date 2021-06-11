@@ -17,76 +17,103 @@
 \citation{moshavegh}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Motivation and context}{3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}The broad topic: Medical Physics and Artificial Intelligence}{3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Number of published papers on IA y DL \cite  {shen}\relax }}{3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}The specific topic: Lung ultrasound and Covid-19}{3}\protected@file@percent }
-\citation{bushberg}
-\citation{farr}
-\citation{farr}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}Medical Physics and Artificial Intelligence}{3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \small  The number of published papers on IA y DL has grown exponentially in recent years. \cite  {shen}\relax }}{3}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{papers}{{1}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}Lung ultrasound and COVID-19}{3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Physics of ultrasound imaging}{4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}Physical principles of ultrasound imaging}{4}\protected@file@percent }
 \citation{bushberg}
 \citation{farr}
+\citation{farr}
 \citation{bushberg}
 \citation{farr}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Typical values of density, speed of sound and acoustical impedance \cite  {farr}\relax }}{5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}Transducers, beam properties}{5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Low Q and high Q: spectrum and pulse comparison\cite  {bushberg}\cite  {farr}\relax }}{5}\protected@file@percent }
+\citation{bushberg}
+\citation{farr}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces \small  Typical values of density, speed of sound and acoustical impedance for common tissues found in medical ultrasound. \cite  {farr}\relax }}{5}\protected@file@percent }
+\newlabel{tissues}{{1}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}Transducers and beam properties}{5}\protected@file@percent }
 \citation{farr}
 \citation{farr}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Spatial resolution along axial direction is determined by half the spatial pulse length (SPL) \cite  {farr}\relax }}{6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \small  Comparison of a low Q pulse (a) and high Q pulse (b): the amount of dampening of the transducer affects the length of the emitted pulse and consequently the bandwith of its spectrum. \cite  {bushberg}\cite  {farr}\relax }}{6}\protected@file@percent }
+\newlabel{pulse}{{2}{6}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}Image formation}{6}\protected@file@percent }
 \citation{artifacts}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \small  Spatial resolution along axial direction is determined by half the spatial pulse length ($SPL$). Two adyacent interfaces A and B separated by a distance $d$ can only be resolved if $d$ is greater than $\frac  {1}{2} SPL$. \cite  {farr}\relax }}{7}\protected@file@percent }
+\newlabel{resolution}{{3}{7}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.4}Lung Ultrasound and artifacts}{7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Common ultrasound artifacts found in lungs\relax }}{7}\protected@file@percent }
-\citation{tung2020lung}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \small  A-lines (a) and B-lines (b) are common artifacts observed in lung ultrasound.\relax }}{8}\protected@file@percent }
+\newlabel{artifacts}{{4}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Objectives}{8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Software tools}{8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Data set}{8}\protected@file@percent }
+\citation{numpy}
+\citation{matplotlib}
+\citation{opencv}
+\citation{sklearn}
+\citation{spyder}
+\citation{pycharm}
+\citation{tung2020lung}
 \citation{python}
 \citation{python}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Software tools}{9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Data set}{9}\protected@file@percent }
 \citation{sklearn}
 \citation{python}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Representation of a K-Means algorithm for a dataset of two features: each cluster (red, green, blue) is represented by its centroid (triangles)\cite  {python}\relax }}{9}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Selected frames representing a video\relax }}{10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Feature based classification}{10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Polar format of ultrasound images}{10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Selected B-line features}{10}\protected@file@percent }
-\citation{sklearn}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Reshaping of images into polar coordinates\relax }}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Image based classification}{11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Classification algorithm: logistic regression}{11}\protected@file@percent }
-\citation{geron}
-\citation{geron}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Example of a logistic function fit to a set of data. Values above the decision boundary are assigned to class 1. \cite  {geron}\relax }}{12}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Overview of feature scores\relax }}{12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{12}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Confusion matrices of both classifiers\relax }}{13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \small  Representation of a K-Means algorithm for a two-dimensional data set. Each cluster (red, green, blue) is represented by its average or 'centroid' (triangles). Data points are assigned to the cluster whose centroid is the closest. The algorithm looks for the configuration whose 'inertia' or 'within cluster sum of squares' is minimised.\cite  {python}\relax }}{10}\protected@file@percent }
+\newlabel{clustering}{{5}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \small  Selected frames representing a video. A K-Means clustering algorithm was used to split every video into three clusters. The nearest frame to each cluster centroid was selected.\relax }}{11}\protected@file@percent }
+\newlabel{key_frames}{{6}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Feature-based classification}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Polar format of ultrasound images}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Selected B-line features}{11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \small  Reshaping from sector format (left) into polar format (right). Radial and angular coordinates are subdivided into $N=M=50$ sections. Each region's mean brightness value is assigned to a pixel in a $N\times M$ rectangular image. As a result, rows represent equal radial coordinates and columns represent equal angular coordinates.\relax }}{12}\protected@file@percent }
+\newlabel{polar}{{7}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Image-based classification}{13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \small  Comparison of feature-based and image-based approaches. On the feature-based approach (upper part) images are represented by 5-element vectors. On the image-based approach (lower part) images are represented by 40000-element vectors.\relax }}{13}\protected@file@percent }
+\newlabel{diagrama}{{8}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Classification algorithm: logistic regression}{13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{14}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \small  Score distribution of positive cases (orange, B-lines) and negative cases (blue, no B-lines) for every analysed feature. Although mean values (vertical lines) on different classes are distinct, there is also some overlap between classes' scores. An ideal feature would yield non-overlapping score distributions.\relax }}{15}\protected@file@percent }
+\newlabel{scores}{{9}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \small  Confusion matrices of both approaches. Values correspond to number of samples out of 128 testing samples as follows (left to right, top to bottom): true negatives (TN), false positives (FP), false negatives (FN) and true positives (TP).\relax }}{15}\protected@file@percent }
+\newlabel{confusion}{{10}{15}}
 \citation{brattain}
 \citation{vanSloun}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of results: feature extraction and image classification\relax }}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{14}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Potential false positives: (a) presence of organs such as the spleen may be mistaken for B-lines, (b) A-lines may have high average brightness.\relax }}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}ULTRACOV project}{15}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Graphical user interface including analysis tools for Ultracov project.\relax }}{15}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces \small  Comparison of classification results: feature-based and image-based approaches. The image-based approach showed a better performance across every statistical measure.\relax }}{16}\protected@file@percent }
+\newlabel{results}{{2}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{16}\protected@file@percent }
+\citation{ultracov}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Potential false positives: presence of organs such as the spleen may be mistaken for B-lines with the current analysed features.\relax }}{17}\protected@file@percent }
+\newlabel{spleen}{{11}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Appendix}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Source code}{17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}ULTRACOV project}{17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \small  Graphical user interface (GUI) including analysis tools for ULTRACOV project. Different tools are integrated in the GUI, such as a 'pleura detector' that automatically identifies the pleural line (in yellow on the image).\relax }}{18}\protected@file@percent }
+\newlabel{GUI}{{12}{18}}
 \bibdata{biblio}
-\bibcite{allinovi}{1}
-\bibcite{farr}{2}
-\bibcite{artifacts}{3}
-\bibcite{born2020pocovid}{4}
-\bibcite{brattain}{5}
-\bibcite{bushberg}{6}
-\bibcite{cristiana2020automated}{7}
-\bibcite{esteva}{8}
-\bibcite{geron}{9}
-\bibcite{moshavegh}{10}
-\bibcite{python}{11}
-\bibcite{ottaviani}{12}
-\bibcite{sklearn}{13}
-\bibcite{rajpurkar}{14}
-\bibcite{roy2020deep}{15}
-\bibcite{shen}{16}
-\bibcite{tung2020lung}{17}
-\bibcite{vanSloun}{18}
+\bibcite{pycharm}{1}
+\bibcite{spyder}{2}
+\bibcite{ultracov}{3}
+\bibcite{allinovi}{4}
+\bibcite{farr}{5}
+\bibcite{artifacts}{6}
+\bibcite{born2020pocovid}{7}
+\bibcite{brattain}{8}
+\bibcite{bushberg}{9}
+\bibcite{cristiana2020automated}{10}
+\bibcite{esteva}{11}
+\bibcite{numpy}{12}
+\bibcite{matplotlib}{13}
+\bibcite{opencv}{14}
+\bibcite{moshavegh}{15}
+\bibcite{python}{16}
+\bibcite{ottaviani}{17}
+\bibcite{sklearn}{18}
+\bibcite{rajpurkar}{19}
+\bibcite{roy2020deep}{20}
+\bibcite{shen}{21}
+\bibcite{tung2020lung}{22}
+\bibcite{vanSloun}{23}
 \bibstyle{plain}

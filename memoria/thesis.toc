@@ -1,22 +1,25 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {1}Introduction}{3}%
 \contentsline {subsection}{\numberline {1.1}Motivation and context}{3}%
-\contentsline {subsubsection}{\numberline {1.1.1}The broad topic: Medical Physics and Artificial Intelligence}{3}%
-\contentsline {subsubsection}{\numberline {1.1.2}The specific topic: Lung ultrasound and Covid-19}{3}%
+\contentsline {subsubsection}{\numberline {1.1.1}Medical Physics and Artificial Intelligence}{3}%
+\contentsline {subsubsection}{\numberline {1.1.2}Lung ultrasound and COVID-19}{3}%
 \contentsline {subsection}{\numberline {1.2}Physics of ultrasound imaging}{4}%
 \contentsline {subsubsection}{\numberline {1.2.1}Physical principles of ultrasound imaging}{4}%
-\contentsline {subsubsection}{\numberline {1.2.2}Transducers, beam properties}{5}%
+\contentsline {subsubsection}{\numberline {1.2.2}Transducers and beam properties}{5}%
 \contentsline {subsubsection}{\numberline {1.2.3}Image formation}{6}%
 \contentsline {subsubsection}{\numberline {1.2.4}Lung Ultrasound and artifacts}{7}%
 \contentsline {section}{\numberline {2}Objectives}{8}%
-\contentsline {section}{\numberline {3}Methods}{8}%
-\contentsline {subsection}{\numberline {3.1}Software tools}{8}%
-\contentsline {subsection}{\numberline {3.2}Data set}{8}%
-\contentsline {subsection}{\numberline {3.3}Feature based classification}{10}%
-\contentsline {subsubsection}{\numberline {3.3.1}Polar format of ultrasound images}{10}%
-\contentsline {subsubsection}{\numberline {3.3.2}Selected B-line features}{10}%
-\contentsline {subsection}{\numberline {3.4}Image based classification}{11}%
-\contentsline {subsection}{\numberline {3.5}Classification algorithm: logistic regression}{11}%
-\contentsline {section}{\numberline {4}Results}{12}%
-\contentsline {section}{\numberline {5}Discussion}{14}%
-\contentsline {subsection}{\numberline {5.1}ULTRACOV project}{15}%
+\contentsline {section}{\numberline {3}Methods}{9}%
+\contentsline {subsection}{\numberline {3.1}Software tools}{9}%
+\contentsline {subsection}{\numberline {3.2}Data set}{9}%
+\contentsline {subsection}{\numberline {3.3}Feature-based classification}{11}%
+\contentsline {subsubsection}{\numberline {3.3.1}Polar format of ultrasound images}{11}%
+\contentsline {subsubsection}{\numberline {3.3.2}Selected B-line features}{11}%
+\contentsline {subsection}{\numberline {3.4}Image-based classification}{13}%
+\contentsline {subsection}{\numberline {3.5}Classification algorithm: logistic regression}{13}%
+\contentsline {section}{\numberline {4}Results}{14}%
+\contentsline {section}{\numberline {5}Discussion}{16}%
+\contentsline {section}{\numberline {6}Conclusion}{17}%
+\contentsline {section}{\numberline {7}Appendix}{17}%
+\contentsline {subsection}{\numberline {7.1}Source code}{17}%
+\contentsline {subsection}{\numberline {7.2}ULTRACOV project}{17}%

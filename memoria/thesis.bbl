@@ -1,5 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{pycharm}
+Pycharm homepage.
+\newblock {\em https://www.jetbrains.com/pycharm/}.
+
+\bibitem{spyder}
+Spyder-documentation.
+\newblock {\em https://docs.spyder-ide.org/current/index.html}.
+
+\bibitem{ultracov}
+Ultracov project homepage.
+\newblock {\em http://ultracov.daselsistemas.com/}.
+
 \bibitem{allinovi}
 Marco Allinovi, Alberto Parise, Martina Giacalone, Andrea Amerio, Marco
   Delsante, Anna Odone, Andrea Franci, Fabrizio Gigliotti, Silvia Amadasi,
@@ -50,11 +62,25 @@ Andre Esteva, Brett Kuprel, Roberto~A Novoa, Justin Ko, Susan~M Swetter,
   networks.
 \newblock {\em nature}, 542(7639):115--118, 2017.
 
-\bibitem{geron}
-Aur{\'e}lien G{\'e}ron.
-\newblock {\em Hands-on machine learning with Scikit-Learn, Keras, and
-  TensorFlow: Concepts, tools, and techniques to build intelligent systems}.
-\newblock O'Reilly Media, 2019.
+\bibitem{numpy}
+Charles~R. Harris, K.~Jarrod Millman, St{\'{e}}fan~J. van~der Walt, Ralf
+  Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor,
+  Sebastian Berg, Nathaniel~J. Smith, Robert Kern, Matti Picus, Stephan Hoyer,
+  Marten~H. van Kerkwijk, Matthew Brett, Allan Haldane, Jaime~Fern{\'{a}}ndez
+  del R{\'{i}}o, Mark Wiebe, Pearu Peterson, Pierre G{\'{e}}rard-Marchant,
+  Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer Abbasi, Christoph
+  Gohlke, and Travis~E. Oliphant.
+\newblock Array programming with {NumPy}.
+\newblock {\em Nature}, 585(7825):357--362, September 2020.
+
+\bibitem{matplotlib}
+J.~D. Hunter.
+\newblock Matplotlib: A 2d graphics environment.
+\newblock {\em Computing in Science \& Engineering}, 9(3):90--95, 2007.
+
+\bibitem{opencv}
+Itseez.
+\newblock {\em The OpenCV Reference Manual}, 2.4.9.0 edition, April 2014.
 
 \bibitem{moshavegh}
 Ramin Moshavegh, Kristoffer~Lindskov Hansen, Hasse~M{\o}ller S{\o}rensen,

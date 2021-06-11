@@ -5,44 +5,54 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Database file #1: biblio.bib
-You've used 18 entries,
+Warning--to sort, need author or key in spyder
+Warning--to sort, need author or key in pycharm
+Warning--to sort, need author or key in ultracov
+Warning--empty author in pycharm
+Warning--empty year in pycharm
+Warning--empty author in spyder
+Warning--empty year in spyder
+Warning--empty author in ultracov
+Warning--empty year in ultracov
+You've used 23 entries,
             2118 wiz_defined-function locations,
-            602 strings with 8338 characters,
-and the built_in function-call counts, 7469 in all, are:
-= -- 649
-> -- 617
+            627 strings with 9173 characters,
+and the built_in function-call counts, 9267 in all, are:
+= -- 806
+> -- 754
 < -- 2
-+ -- 246
-- -- 226
-* -- 623
-:= -- 1348
-add.period$ -- 55
-call.type$ -- 18
-change.case$ -- 160
++ -- 304
+- -- 278
+* -- 810
+:= -- 1641
+add.period$ -- 66
+call.type$ -- 23
+change.case$ -- 203
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 211
-empty$ -- 403
-format.name$ -- 226
-if$ -- 1438
+cite$ -- 32
+duplicate$ -- 259
+empty$ -- 504
+format.name$ -- 278
+if$ -- 1778
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 22
-newline$ -- 93
-num.names$ -- 36
-pop$ -- 171
+int.to.str$ -- 23
+missing$ -- 25
+newline$ -- 114
+num.names$ -- 38
+pop$ -- 212
 preamble$ -- 1
-purify$ -- 146
+purify$ -- 183
 quote$ -- 0
-skip$ -- 145
+skip$ -- 176
 stack$ -- 0
-substring$ -- 240
-swap$ -- 33
+substring$ -- 311
+swap$ -- 38
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 0
-while$ -- 47
-width$ -- 20
-write$ -- 191
+type$ -- 86
+warning$ -- 9
+while$ -- 53
+width$ -- 25
+write$ -- 233
+(There were 9 warnings)
